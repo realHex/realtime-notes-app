@@ -6,9 +6,10 @@ import { ModeToggle } from "@/components/mode-toggle";
 
 import { Logo } from "./logo";
 import { useConvexAuth } from "convex/react";
-import { SignInButton } from "@clerk/clerk-react";
+import { SignInButton, UserButton } from "@clerk/clerk-react";
 import { Button } from "@/components/ui/button";
 import { Spinner } from "@/components/spinner";
+import Link from "next/link";
 
 
 export const Navbar = () => {
@@ -36,6 +37,16 @@ export const Navbar = () => {
                                 Sign Up
                             </Button>
                         </SignInButton>
+                    </>
+                )}
+                {isAuthenticated && !isLoading && (
+                    <>
+                        <Button variant="ghost" size="sm" asChild>
+                            <Link href="/documents">
+                                Enter NotionCN
+                            </Link>
+                        </Button>
+                        <UserButton/>    
                     </>
                 )}
                 <ModeToggle/>

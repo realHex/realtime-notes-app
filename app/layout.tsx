@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Realtime Notion",
-  description: "Notion clone with realtime collaboration",
+  title: "NotionCN",
+  description: "Notion clone with realtime CollaboratioN",
   icons: {
     icon: [
       {
